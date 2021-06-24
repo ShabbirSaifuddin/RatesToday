@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize"
+    android:screenOrientation="portrait"
+    tools:context=".Fragment.CommoditiesFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
+                android:layout_marginLeft="50sp"
+                android:src="@drawable/logo1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
+                android:layout_marginLeft="50sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="Commodities"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5sp"
+                        card_view:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/layout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="15sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:src="@drawable/gold2" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="10sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/name1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginBottom="5sp"
+                                        android:text="Gold Price"
+                                        android:textColor="#4CAF50"
+                                        android:textSize="25sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/price1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginEnd="15sp"
+                                        android:layout_marginRight="15sp"
+                                        android:layout_marginBottom="5sp"
+                                        android:gravity="start"
+                                        android:text="123456"
+                                        android:textColor="#000"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/source1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start|center_vertical"
+                                            android:layout_marginTop="5sp"
+                                            android:gravity="center"
+                                            android:text="Gold Price"
+                                            android:textColor="#000"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/date1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end|center"
+                                            android:layout_marginTop="5sp"
+                                            android:layout_marginEnd="15sp"
+                                            android:layout_marginRight="15sp"
+                                            android:gravity="end"
+                                            android:text="123456"
+                                            android:textAlignment="textEnd"
+                                            android:textColor="#000"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressbar1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10sp"
+                            android:visibility="visible" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5sp"
+                        card_view:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/layout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="15sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:src="@drawable/silver1" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="10sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/name2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginBottom="5sp"
+                                        android:text="Gold Price"
+                                        android:textColor="#4CAF50"
+                                        android:textSize="25sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/price2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginEnd="15sp"
+                                        android:layout_marginRight="15sp"
+                                        android:layout_marginBottom="5sp"
+                                        android:gravity="start"
+                                        android:text="123456"
+                                        android:textColor="#000"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/source2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start|center_vertical"
+                                            android:layout_marginTop="5sp"
+                                            android:gravity="center"
+                                            android:text="Gold Price"
+                                            android:textColor="#000"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/date2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end|center"
+                                            android:layout_marginTop="5sp"
+                                            android:layout_marginEnd="15sp"
+                                            android:layout_marginRight="15sp"
+                                            android:gravity="end"
+                                            android:text="123456"
+                                            android:textAlignment="textEnd"
+                                            android:textColor="#000"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressbar2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10sp"
+                            android:visibility="visible" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5sp"
+                        card_view:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/layout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="15sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:src="@drawable/oil1" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="10sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/name3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginBottom="5sp"
+                                        android:text="Gold Price"
+                                        android:textColor="#4CAF50"
+                                        android:textSize="25sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/price3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginEnd="15sp"
+                                        android:layout_marginRight="15sp"
+                                        android:layout_marginBottom="5sp"
+                                        android:gravity="start"
+                                        android:text="123456"
+                                        android:textColor="#000"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/source3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start|center_vertical"
+                                            android:layout_marginTop="5sp"
+                                            android:gravity="center"
+                                            android:text="Gold Price"
+                                            android:textColor="#000"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/date3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end|center"
+                                            android:layout_marginTop="5sp"
+                                            android:layout_marginEnd="15sp"
+                                            android:layout_marginRight="15sp"
+                                            android:gravity="end"
+                                            android:text="123456"
+                                            android:textAlignment="textEnd"
+                                            android:textColor="#000"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressbar3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10sp"
+                            android:visibility="visible" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5sp"
+                        card_view:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/layout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="15sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:src="@drawable/cotton1" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="10sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/name4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginBottom="5sp"
+                                        android:text="Gold Price"
+                                        android:textColor="#4CAF50"
+                                        android:textSize="25sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/price4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginEnd="15sp"
+                                        android:layout_marginRight="15sp"
+                                        android:layout_marginBottom="5sp"
+                                        android:gravity="start"
+                                        android:text="123456"
+                                        android:textColor="#000"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/source4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start|center_vertical"
+                                            android:layout_marginTop="5sp"
+                                            android:gravity="center"
+                                            android:text="Gold Price"
+                                            android:textColor="#000"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/date4"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end|center"
+                                            android:layout_marginTop="5sp"
+                                            android:layout_marginEnd="15sp"
+                                            android:layout_marginRight="15sp"
+                                            android:gravity="end"
+                                            android:text="123456"
+                                            android:textAlignment="textEnd"
+                                            android:textColor="#000"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressbar4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10sp"
+                            android:visibility="visible" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5sp"
+                        card_view:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/layout5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="15sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:src="@drawable/coal1" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="10sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/name5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginBottom="5sp"
+                                        android:text="Gold Price"
+                                        android:textColor="#4CAF50"
+                                        android:textSize="25sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/price5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginEnd="15sp"
+                                        android:layout_marginRight="15sp"
+                                        android:layout_marginBottom="5sp"
+                                        android:gravity="start"
+                                        android:text="123456"
+                                        android:textColor="#000"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/source5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start|center_vertical"
+                                            android:layout_marginTop="5sp"
+                                            android:gravity="center"
+                                            android:text="Gold Price"
+                                            android:textColor="#000"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/date5"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end|center"
+                                            android:layout_marginTop="5sp"
+                                            android:layout_marginEnd="15sp"
+                                            android:layout_marginRight="15sp"
+                                            android:gravity="end"
+                                            android:text="123456"
+                                            android:textAlignment="textEnd"
+                                            android:textColor="#000"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressbar5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10sp"
+                            android:visibility="visible" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-9873253708928987/3559229921" />
+
+
+</LinearLayout>

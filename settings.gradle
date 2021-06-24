@@ -1,0 +1,2 @@
+rootProject.name='RatesToday'
+include ':app'
